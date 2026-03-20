@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Are AI Agents? A Complete Guide — 24bruv</title>
+    <meta name="description" content="Learn what AI agents are, how they work, and why they matter. A practical guide to understanding AI agents, agentic AI, and autonomous systems by 24bruv." />
+    <link rel="canonical" href="https://24bruv.com/ai-agents-guide.html" />
+    <meta property="og:title" content="What Are AI Agents? A Complete Guide — 24bruv" />
+    <meta property="og:description" content="A practical guide to understanding AI agents, how they work, types, and real-world applications." />
+    <meta property="og:url" content="https://24bruv.com/ai-agents-guide.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="24bruv" />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg fill='%23e8823a' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52.254 52.255'%3E%3Cpath d='M6.339,6.201C6.339,2.777,9.116,0,12.54,0c3.423,0,6.2,2.777,6.2,6.201c0,3.426-2.777,6.203-6.2,6.203C9.116,12.404,6.339,9.626,6.339,6.201z M34.456,6.201C34.456,2.777,37.235,0,40.659,0c3.423,0,6.199,2.777,6.199,6.201c0,3.426-2.776,6.203-6.199,6.203C37.235,12.404,34.456,9.626,34.456,6.201z M26.199,52.255c11.245,0,21.278-6.399,25.563-16.304c0.191-0.441,0.146-0.952-0.117-1.355c-0.266-0.402-0.715-0.646-1.197-0.646L1.811,33.889c-0.001,0-0.002,0-0.002,0c-0.479,0-0.926,0.239-1.192,0.639c-0.266,0.398-0.315,0.902-0.131,1.347C4.62,45.825,14.713,52.255,26.199,52.255z'/%3E%3C/svg%3E" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "What Are AI Agents? A Complete Guide",
+        "description": "A practical guide to understanding AI agents, how they work, types, and real-world applications.",
+        "author": {
+            "@type": "Person",
+            "name": "24bruv",
+            "url": "https://24bruv.com"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "24bruv"
+        },
+        "url": "https://24bruv.com/ai-agents-guide.html",
+        "datePublished": "2026-01-27",
+        "dateModified": "2026-03-13"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is an AI agent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An AI agent is a software system powered by a large language model (LLM) that can perceive its environment, reason about tasks, make decisions, and take autonomous actions to achieve specific goals. Unlike simple chatbots that only respond to prompts, AI agents can use tools, access external data, maintain memory across interactions, and execute multi-step workflows without constant human supervision."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do AI agents work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI agents work through a loop of perception, reasoning, and action. First, they receive an input or observe their environment. Then, they use an LLM to reason about the best course of action, including which tools to use. They execute actions such as calling APIs, querying databases, or generating content. Finally, they evaluate the result and decide whether to take further action or return a response. This loop continues until the task is complete."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the different types of AI agents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The main types of AI agents include: reactive agents that respond to immediate inputs without memory, conversational agents that maintain context across dialogue turns, tool-using agents that can call external APIs and services, planning agents that break complex tasks into sub-steps, and multi-agent systems where multiple specialized agents collaborate to solve complex problems."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why are AI agents important?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI agents are important because they automate complex, multi-step workflows that previously required human judgment and decision-making. They can handle tasks like sales orchestration, document generation, data analysis, and customer support autonomously. This reduces manual work by 30-50% and allows humans to focus on higher-value activities."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you build an AI agent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Building an AI agent involves selecting an LLM provider like OpenAI or Claude, defining the agent's tools and capabilities, implementing memory and context management, designing the reasoning loop, adding error handling and recovery, and deploying the agent in a production environment. Frameworks like AgentKit simplify this process by providing built-in memory, tool routing, and error recovery."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { --bg: #faf7f2; --accent: #e8823a; --ink: #1c1812; --muted: #7a6a58; --border: #e4ddd3; }
+        body { background: var(--bg); color: var(--ink); font-family: 'SF Pro Display', -apple-system, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; line-height: 1.75; min-height: 100vh; }
+        .shell { max-width: 640px; margin: 0 auto; padding: 3rem 2.5rem 4rem; }
+        h1 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 300; color: var(--accent); line-height: 1.15; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.1rem; font-weight: 700; color: var(--ink); margin: 2rem 0 0.6rem; }
+        p { margin-bottom: 1rem; color: var(--ink); }
+        ul { padding-left: 1.2rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.4rem; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .home-link { display: inline-block; margin-bottom: 2rem; font-size: 0.85rem; color: var(--muted); }
+        .home-link:hover { color: var(--accent); }
+        .definition { background: #f3f0e9; border-left: 3px solid var(--accent); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 0 6px 6px 0; font-size: 0.95rem; }
+        .foot { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted); }
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <a href="/" class="home-link">← back to 24bruv.com</a>
+        <h1>A Guide to AI Agents — What They Are and How They Work</h1>
+
+        <div class="definition">
+            <p style="margin:0">An AI agent is a software system powered by a large language model that can perceive its environment, reason about tasks, and take autonomous actions to achieve specific goals — going far beyond simple chatbot interactions.</p>
+        </div>
+
+        <section>
+            <h2>What is an AI agent?</h2>
+            <p>An AI agent is a software system powered by a large language model (LLM) that can perceive its environment, reason about tasks, make decisions, and take autonomous actions to achieve specific goals. Unlike simple chatbots that only respond to prompts, AI agents can use tools, access external data, maintain memory across interactions, and execute multi-step workflows without constant human supervision.</p>
+            <p>The concept of AI agents represents a significant evolution in how we interact with artificial intelligence. Instead of asking an AI a question and getting a static answer, you give an AI agent a goal and it figures out how to accomplish it — calling APIs, querying databases, generating documents, and coordinating with other systems along the way.</p>
+        </section>
+
+        <section>
+            <h2>How do AI agents work?</h2>
+            <p>AI agents work through a continuous loop of perception, reasoning, and action:</p>
+            <ul>
+                <li><strong>Perception:</strong> The agent receives an input or observes its environment, including any context from previous interactions stored in memory.</li>
+                <li><strong>Reasoning:</strong> Using an LLM, the agent analyzes the situation and determines the best course of action, including which tools to use and in what order.</li>
+                <li><strong>Action:</strong> The agent executes one or more actions — calling APIs, querying databases, generating content, or communicating with other agents.</li>
+                <li><strong>Evaluation:</strong> After each action, the agent evaluates the result and decides whether to take further action or return a final response.</li>
+            </ul>
+            <p>This loop continues until the task is complete or the agent determines it needs human input to proceed.</p>
+        </section>
+
+        <section>
+            <h2>What are the different types of AI agents?</h2>
+            <p>AI agents come in several forms, each suited to different use cases:</p>
+            <ul>
+                <li><strong>Reactive agents</strong> respond to immediate inputs without maintaining memory of past interactions. They are simple but fast.</li>
+                <li><strong>Conversational agents</strong> maintain context across dialogue turns, enabling natural multi-turn conversations.</li>
+                <li><strong>Tool-using agents</strong> can call external APIs, search the web, execute code, and interact with third-party services.</li>
+                <li><strong>Planning agents</strong> break complex tasks into sub-steps and execute them in sequence, adapting their plan based on intermediate results.</li>
+                <li><strong>Multi-agent systems</strong> coordinate multiple specialized agents that collaborate to solve complex problems no single agent could handle alone.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why are AI agents important?</h2>
+            <p>AI agents are important because they automate complex, multi-step workflows that previously required human judgment and decision-making. They can handle tasks like sales orchestration, document generation, data analysis, and customer support autonomously. In production environments, well-designed AI agents can reduce manual work by 30-50% while maintaining quality and consistency.</p>
+            <p>The shift from prompt-response AI to agentic AI represents a fundamental change in how businesses can leverage artificial intelligence — moving from a tool you query to a colleague that takes initiative.</p>
+        </section>
+
+        <section>
+            <h2>How do you build an AI agent?</h2>
+            <p>Building a production-ready AI agent involves several key steps:</p>
+            <ul>
+                <li><strong>Choose an LLM provider</strong> — such as OpenAI (GPT-4), Anthropic (Claude), or open-source models via Ollama or HuggingFace.</li>
+                <li><strong>Define tools and capabilities</strong> — specify what the agent can do, like calling APIs, searching databases, or generating files.</li>
+                <li><strong>Implement memory</strong> — give the agent context awareness through short-term conversation memory and long-term knowledge stores.</li>
+                <li><strong>Design the reasoning loop</strong> — determine how the agent decides what to do next based on its observations and goals.</li>
+                <li><strong>Add error handling</strong> — build recovery mechanisms for when tools fail, APIs timeout, or the agent gets stuck.</li>
+                <li><strong>Deploy to production</strong> — set up monitoring, logging, and evaluation to ensure reliable performance.</li>
+            </ul>
+            <p>Frameworks like <a href="/">AgentKit by 24bruv</a> simplify this process by providing built-in memory management, tool routing, and error recovery out of the box.</p>
+        </section>
+
+        <section>
+            <h2>Real-world use cases for AI agents</h2>
+            <p>AI agents are being deployed across industries to automate complex workflows:</p>
+            <ul>
+                <li><strong>Sales orchestration</strong> — agents that qualify leads, send personalized outreach, and schedule meetings.</li>
+                <li><strong>Document generation</strong> — agents that create reports, proposals, and contracts from structured data.</li>
+                <li><strong>Analytics pipelines</strong> — agents that collect, process, and visualize data from multiple sources.</li>
+                <li><strong>Customer support</strong> — agents that resolve tickets, escalate issues, and learn from past interactions.</li>
+                <li><strong>Content creation</strong> — agents that convert video and audio into blog posts, summaries, and social media content.</li>
+            </ul>
+        </section>
+
+        <div class="definition">
+            <p style="margin:0">24bruv.com is a resource for developers learning about AI agents and agentic AI systems. Learn more about AI engineering at <a href="/">24bruv.com</a>.</p>
+        </div>
+
+        <div class="foot">
+            <p>© 2026 24bruv. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

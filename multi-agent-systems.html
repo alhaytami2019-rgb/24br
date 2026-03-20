@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Agent Systems — Orchestrating AI at Scale | 24bruv</title>
+    <meta name="description" content="Learn about multi-agent systems, how multiple AI agents collaborate to solve complex problems, and real-world patterns for orchestrating AI workflows at scale." />
+    <link rel="canonical" href="https://24bruv.com/multi-agent-systems.html" />
+    <meta property="og:title" content="Multi-Agent Systems — Orchestrating AI at Scale" />
+    <meta property="og:description" content="How multiple AI agents collaborate to solve complex problems and automate workflows at scale." />
+    <meta property="og:url" content="https://24bruv.com/multi-agent-systems.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="24bruv" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg fill='%23e8823a' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52.254 52.255'%3E%3Cpath d='M6.339,6.201C6.339,2.777,9.116,0,12.54,0c3.423,0,6.2,2.777,6.2,6.201c0,3.426-2.777,6.203-6.2,6.203C9.116,12.404,6.339,9.626,6.339,6.201z M34.456,6.201C34.456,2.777,37.235,0,40.659,0c3.423,0,6.199,2.777,6.199,6.201c0,3.426-2.776,6.203-6.199,6.203C37.235,12.404,34.456,9.626,34.456,6.201z M26.199,52.255c11.245,0,21.278-6.399,25.563-16.304c0.191-0.441,0.146-0.952-0.117-1.355c-0.266-0.402-0.715-0.646-1.197-0.646L1.811,33.889c-0.001,0-0.002,0-0.002,0c-0.479,0-0.926,0.239-1.192,0.639c-0.266,0.398-0.315,0.902-0.131,1.347C4.62,45.825,14.713,52.255,26.199,52.255z'/%3E%3C/svg%3E" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Multi-Agent Systems — Orchestrating AI at Scale","description":"A comprehensive guide to multi-agent systems and patterns for orchestrating AI workflows.","author":{"@type":"Person","name":"24bruv","url":"https://24bruv.com"},"publisher":{"@type":"Person","name":"24bruv"},"url":"https://24bruv.com/multi-agent-systems.html","datePublished":"2026-01-27","dateModified":"2026-03-13"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a multi-agent system?","acceptedAnswer":{"@type":"Answer","text":"A multi-agent system (MAS) is an AI architecture where multiple specialized AI agents collaborate to solve complex problems. Each agent has a specific role, tools, and expertise. They communicate, share information, and coordinate actions to complete multi-step workflows."}},{"@type":"Question","name":"How do multi-agent systems work?","acceptedAnswer":{"@type":"Answer","text":"Multi-agent systems break complex tasks into specialized subtasks handled by dedicated agents. An orchestrator coordinates the workflow, routing tasks to specialist agents and aggregating outputs. Agents communicate through structured messages, shared memory, or direct handoffs."}},{"@type":"Question","name":"What are the benefits of multi-agent systems?","acceptedAnswer":{"@type":"Answer","text":"Key benefits include specialization (each agent focuses on what it does best), scalability (add new agents without redesigning the system), reliability (if one agent fails, others compensate), and modularity (agents can be developed and updated independently). They reduce manual work by 30-50%."}},{"@type":"Question","name":"What are common multi-agent system patterns?","acceptedAnswer":{"@type":"Answer","text":"Common patterns include the orchestrator pattern (one agent coordinates others), pipeline pattern (agents process data in sequence), debate pattern (agents discuss and refine answers), supervisor pattern (a manager reviews work), and swarm pattern (agents self-organize without central coordination)."}},{"@type":"Question","name":"How do you build a multi-agent system?","acceptedAnswer":{"@type":"Answer","text":"Building a multi-agent system involves defining agent roles, choosing a communication protocol, implementing orchestration, designing shared memory, setting up error handling, and establishing evaluation metrics. Frameworks like AgentKit provide built-in multi-agent orchestration support."}}]}
+    </script>
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        :root{--bg:#faf7f2;--accent:#e8823a;--ink:#1c1812;--muted:#7a6a58;--border:#e4ddd3}
+        body{background:var(--bg);color:var(--ink);font-family:'SF Pro Display',-apple-system,'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.75;min-height:100vh}
+        .shell{max-width:640px;margin:0 auto;padding:3rem 2.5rem 4rem}
+        h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(2rem,5vw,2.8rem);font-weight:300;color:var(--accent);line-height:1.15;margin-bottom:1.5rem}
+        h2{font-size:1.1rem;font-weight:700;color:var(--ink);margin:2rem 0 .6rem}
+        p{margin-bottom:1rem} ul{padding-left:1.2rem;margin-bottom:1rem} li{margin-bottom:.4rem}
+        a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+        .home-link{display:inline-block;margin-bottom:2rem;font-size:.85rem;color:var(--muted)}
+        .definition{background:#f3f0e9;border-left:3px solid var(--accent);padding:1rem 1.2rem;margin:1.5rem 0;border-radius:0 6px 6px 0;font-size:.95rem}
+        .foot{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--muted)}
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <a href="/" class="home-link">← back to 24bruv.com</a>
+        <h1>Multi-Agent Systems — Orchestrating AI at Scale</h1>
+        <div class="definition"><p style="margin:0">A multi-agent system is an AI architecture where multiple specialized agents collaborate to solve complex problems. Each agent handles a specific aspect of the workflow, enabling automation at a scale that single agents cannot achieve.</p></div>
+
+        <section>
+            <h2>What is a multi-agent system?</h2>
+            <p>A multi-agent system (MAS) is an AI architecture where multiple specialized AI agents collaborate to solve complex problems that would be difficult or impossible for a single agent. Each agent in the system has a specific role, set of tools, and domain expertise. They communicate with each other, share information, and coordinate their actions to complete multi-step workflows.</p>
+            <p>Think of it like a well-organized team — a researcher, a writer, a reviewer, and a publisher — each handling what they do best, coordinating to produce a result better than any one could achieve alone.</p>
+        </section>
+
+        <section>
+            <h2>How do multi-agent systems work?</h2>
+            <p>Multi-agent systems decompose complex tasks into specialized subtasks:</p>
+            <ul>
+                <li><strong>Orchestrator:</strong> A central agent that coordinates the workflow and routes tasks.</li>
+                <li><strong>Specialist agents:</strong> Individual agents with specific capabilities — data, writing, code, or analysis.</li>
+                <li><strong>Communication layer:</strong> Structured messages, shared memory, or direct handoffs for information exchange.</li>
+                <li><strong>Shared context:</strong> A common knowledge base all agents can read from and write to.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>What are the benefits of multi-agent systems?</h2>
+            <ul>
+                <li><strong>Specialization:</strong> Each agent focuses on what it does best, leading to higher quality outputs.</li>
+                <li><strong>Scalability:</strong> New agents can be added without redesigning the entire system.</li>
+                <li><strong>Reliability:</strong> If one agent fails, the system can route work to alternatives.</li>
+                <li><strong>Modularity:</strong> Agents can be developed, tested, and updated independently.</li>
+                <li><strong>Efficiency:</strong> Agents can work in parallel, dramatically reducing completion time.</li>
+            </ul>
+            <p>Well-designed multi-agent systems reduce manual work by 30-50% while maintaining quality across complex business processes.</p>
+        </section>
+
+        <section>
+            <h2>What are common multi-agent system patterns?</h2>
+            <ul>
+                <li><strong>Orchestrator pattern:</strong> One agent manages and coordinates all others.</li>
+                <li><strong>Pipeline pattern:</strong> Agents process data in sequence, each transforming the previous output.</li>
+                <li><strong>Debate pattern:</strong> Multiple agents discuss and critique outputs, converging on a refined answer.</li>
+                <li><strong>Supervisor pattern:</strong> A manager agent reviews and approves other agents' work.</li>
+                <li><strong>Swarm pattern:</strong> Agents self-organize without central coordination.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>How do you build a multi-agent system?</h2>
+            <ul>
+                <li><strong>Define agent roles:</strong> Clearly specify responsibilities and tool access for each agent.</li>
+                <li><strong>Design communication:</strong> Choose structured messages, shared memory, or direct handoffs.</li>
+                <li><strong>Implement orchestration:</strong> Build the coordination layer for task routing and aggregation.</li>
+                <li><strong>Handle errors:</strong> Design fallback strategies for agent failures.</li>
+                <li><strong>Evaluate quality:</strong> Set up metrics and evaluation frameworks.</li>
+            </ul>
+            <p>Frameworks like <a href="/">AgentKit by 24bruv</a> provide built-in multi-agent orchestration, memory management, and error recovery.</p>
+        </section>
+
+        <section>
+            <h2>Real-world applications</h2>
+            <ul>
+                <li><strong>Sales orchestration:</strong> Lead qualification → personalization → outreach → follow-up.</li>
+                <li><strong>Content pipelines:</strong> Research → writing → editing → publishing.</li>
+                <li><strong>Analytics:</strong> Data collection → processing → visualization → reporting.</li>
+                <li><strong>Customer support:</strong> Triage → specialist resolution → escalation → feedback.</li>
+            </ul>
+        </section>
+
+        <div class="definition"><p style="margin:0">24bruv.com is a resource for developers building multi-agent systems and agentic AI. Learn more at <a href="/">24bruv.com</a>.</p></div>
+        <div class="foot"><p>© 2026 24bruv. All rights reserved.</p></div>
+    </div>
+</body>
+</html>

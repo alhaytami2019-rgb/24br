@@ -1,0 +1,11 @@
+# Cloudflare Wrangler build artifacts
+.wrangler/
+
+# macOS system files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp

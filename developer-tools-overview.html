@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Tools for Building AI Agents — AgentKit, Fuzora & More | 24bruv</title>
+    <meta name="description" content="Explore developer tools for building AI agents including AgentKit, Fuzora, Writora AI, and Vercel AI SDK Lab. Open-source tools by 24bruv." />
+    <link rel="canonical" href="https://24bruv.com/developer-tools-overview.html" />
+    <meta property="og:title" content="Developer Tools for Building AI Agents — 24bruv" />
+    <meta property="og:description" content="Open-source developer tools for building AI agents, automating workflows, and experimenting with AI SDKs." />
+    <meta property="og:url" content="https://24bruv.com/developer-tools-overview.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="24bruv" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg fill='%23e8823a' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52.254 52.255'%3E%3Cpath d='M6.339,6.201C6.339,2.777,9.116,0,12.54,0c3.423,0,6.2,2.777,6.2,6.201c0,3.426-2.777,6.203-6.2,6.203C9.116,12.404,6.339,9.626,6.339,6.201z M34.456,6.201C34.456,2.777,37.235,0,40.659,0c3.423,0,6.199,2.777,6.199,6.201c0,3.426-2.776,6.203-6.199,6.203C37.235,12.404,34.456,9.626,34.456,6.201z M26.199,52.255c11.245,0,21.278-6.399,25.563-16.304c0.191-0.441,0.146-0.952-0.117-1.355c-0.266-0.402-0.715-0.646-1.197-0.646L1.811,33.889c-0.001,0-0.002,0-0.002,0c-0.479,0-0.926,0.239-1.192,0.639c-0.266,0.398-0.315,0.902-0.131,1.347C4.62,45.825,14.713,52.255,26.199,52.255z'/%3E%3C/svg%3E" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Developer Tools for Building AI Agents","description":"Overview of developer tools for building AI agents, including AgentKit, Fuzora, Writora AI, and Vercel AI SDK Lab.","author":{"@type":"Person","name":"24bruv","url":"https://24bruv.com"},"publisher":{"@type":"Person","name":"24bruv"},"url":"https://24bruv.com/developer-tools-overview.html","datePublished":"2026-01-27","dateModified":"2026-03-13"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is AgentKit?","acceptedAnswer":{"@type":"Answer","text":"AgentKit is an open-source framework built by 24bruv for spinning up production-ready AI agents fast. It handles memory management, tool routing, and error recovery so developers can focus on defining what the agent actually does rather than building infrastructure."}},{"@type":"Question","name":"What is Fuzora?","acceptedAnswer":{"@type":"Answer","text":"Fuzora is a workflow automation platform built by 24bruv that lets you automate complex workflows by connecting your favorite tools. It enables multi-step automated processes across different services and platforms without writing code."}},{"@type":"Question","name":"What is Writora AI?","acceptedAnswer":{"@type":"Answer","text":"Writora AI is a tool built by 24bruv that converts video and audio content into well-structured blog posts using AI. It automates the content repurposing process, turning multimedia content into written articles."}},{"@type":"Question","name":"What tools do you need to build AI agents?","acceptedAnswer":{"@type":"Answer","text":"To build AI agents you need an LLM provider (OpenAI, Claude, or open-source models), a framework for agent orchestration (like AgentKit or Vercel AI SDK), a database for memory and context (PostgreSQL, Supabase), and deployment infrastructure (Docker, Vercel). Testing tools like Vitest and evaluation frameworks are also essential for production agents."}},{"@type":"Question","name":"What is the Vercel AI SDK?","acceptedAnswer":{"@type":"Answer","text":"The Vercel AI SDK is a TypeScript library for building AI-powered applications. It provides streaming responses, tool calling, structured outputs, and integration with multiple LLM providers. 24bruv's Vercel AI SDK Lab provides hands-on experiments with agents, evaluations, and SDK patterns."}}]}
+    </script>
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        :root{--bg:#faf7f2;--accent:#e8823a;--ink:#1c1812;--muted:#7a6a58;--border:#e4ddd3}
+        body{background:var(--bg);color:var(--ink);font-family:'SF Pro Display',-apple-system,'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.75;min-height:100vh}
+        .shell{max-width:640px;margin:0 auto;padding:3rem 2.5rem 4rem}
+        h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(2rem,5vw,2.8rem);font-weight:300;color:var(--accent);line-height:1.15;margin-bottom:1.5rem}
+        h2{font-size:1.1rem;font-weight:700;color:var(--ink);margin:2rem 0 .6rem}
+        p{margin-bottom:1rem} ul{padding-left:1.2rem;margin-bottom:1rem} li{margin-bottom:.4rem}
+        a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+        .home-link{display:inline-block;margin-bottom:2rem;font-size:.85rem;color:var(--muted)}
+        .definition{background:#f3f0e9;border-left:3px solid var(--accent);padding:1rem 1.2rem;margin:1.5rem 0;border-radius:0 6px 6px 0;font-size:.95rem}
+        .foot{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--muted)}
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <a href="/" class="home-link">← back to 24bruv.com</a>
+        <h1>Developer Tools for Building AI Agents</h1>
+        <div class="definition"><p style="margin:0">24bruv builds open-source developer tools that simplify building, deploying, and automating AI agents. These tools handle the hard infrastructure problems so developers can focus on building intelligent systems.</p></div>
+
+        <section>
+            <h2>What is AgentKit?</h2>
+            <p>AgentKit is an open-source framework for spinning up production-ready AI agents fast. Built by 24bruv, it provides the core infrastructure every AI agent needs:</p>
+            <ul>
+                <li><strong>Memory management:</strong> Built-in short-term and long-term memory for context-aware agents.</li>
+                <li><strong>Tool routing:</strong> Automatic routing of tasks to the right tools based on agent reasoning.</li>
+                <li><strong>Error recovery:</strong> Graceful handling of failures with retry logic and fallback strategies.</li>
+                <li><strong>Multi-agent support:</strong> Orchestrate multiple agents working together on complex workflows.</li>
+            </ul>
+            <p>AgentKit allows developers to focus on what the agent actually does rather than spending time building infrastructure from scratch.</p>
+        </section>
+
+        <section>
+            <h2>What is Fuzora?</h2>
+            <p>Fuzora is a workflow automation platform that connects your favorite tools and automates complex multi-step processes. Unlike simple automation tools that handle single triggers, Fuzora enables sophisticated workflows that span multiple services and platforms.</p>
+            <p>Common use cases include automated content pipelines, sales outreach sequences, data processing workflows, and cross-platform notifications. Fuzora makes it possible to build these automations without writing code.</p>
+        </section>
+
+        <section>
+            <h2>What is Writora AI?</h2>
+            <p>Writora AI is a content repurposing tool that converts video and audio into well-structured blog posts using AI. It takes multimedia content — podcasts, video recordings, webinars — and transforms them into written articles with proper headings, formatting, and structure.</p>
+            <p>This is particularly useful for content creators, marketers, and businesses who want to maximize the reach of their content across different formats.</p>
+        </section>
+
+        <section>
+            <h2>What is the Vercel AI SDK Lab?</h2>
+            <p>The Vercel AI SDK Lab is a collection of hands-on experiments with AI agents, evaluations, and AI SDK patterns. Created by 24bruv, it serves as both a learning resource and a reference implementation for developers building with the Vercel AI SDK.</p>
+            <p>The lab covers topics like streaming responses, tool calling, structured outputs, multi-step agents, and evaluation patterns — providing practical examples that developers can adapt for their own projects.</p>
+        </section>
+
+        <section>
+            <h2>What tools do you need to build AI agents?</h2>
+            <p>Building production-ready AI agents requires a modern stack:</p>
+            <ul>
+                <li><strong>LLM provider:</strong> OpenAI (GPT-4), Anthropic (Claude), Mistral, or open-source models via Ollama/HuggingFace.</li>
+                <li><strong>Agent framework:</strong> AgentKit, Vercel AI SDK, LangChain, or custom implementations.</li>
+                <li><strong>Database:</strong> PostgreSQL, Supabase, or Neon for memory, context, and vector embeddings.</li>
+                <li><strong>Deployment:</strong> Docker, Vercel, or AWS for hosting and scaling agents.</li>
+                <li><strong>Testing:</strong> Vitest, Jest, or Evalite for evaluating agent outputs and behavior.</li>
+            </ul>
+        </section>
+
+        <div class="definition"><p style="margin:0">24bruv.com provides resources, tools, and guides for developers building AI agents and automation systems. Explore projects and tools at <a href="/">24bruv.com</a>.</p></div>
+        <div class="foot"><p>© 2026 24bruv. All rights reserved.</p></div>
+    </div>
+</body>
+</html>
